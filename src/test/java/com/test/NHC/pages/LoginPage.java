@@ -19,7 +19,7 @@ public class LoginPage {
     @FindBy(xpath="//button[contains(text(),'Sign in')]")
     WebElement singInButton;
 
-    public void login(){
+    public void TC1(){
         userName.sendKeys(ConfigReader.readProperty("nhcLogin"));
         password.sendKeys(ConfigReader.readProperty("nhcPassword"));
 
@@ -27,6 +27,15 @@ public class LoginPage {
     public void singIn(){
         singInButton.click();
     }
+    public void TC2(){
+        userName.sendKeys("admin1234");
+        password.sendKeys(ConfigReader.readProperty("nhcPassword"));
+    }
+    public void TC3(){
+        userName.sendKeys(ConfigReader.readProperty("nhcLogin"));
+        password.sendKeys("");
+    }
+
 
 
     }

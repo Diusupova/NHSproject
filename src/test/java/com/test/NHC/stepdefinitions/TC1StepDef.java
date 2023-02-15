@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
-public class LoginStepDef {
+public class TC1StepDef {
     WebDriver driver = DriverHelper.getDriver();
     LoginPage loginPage=new LoginPage(driver);
 
@@ -25,7 +25,7 @@ public class LoginStepDef {
     }
     @When("The user enter the valid username and valid password")
     public void the_user_enter_the_valid_username_and_valid_password() {
-        loginPage.login();
+        loginPage.TC1();
 
     }
     @When("The user press the SignIn button")
